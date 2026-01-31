@@ -96,10 +96,10 @@ async function cadastrar() {
 
   const msg = await res.json();
   Swal.close();
+  limparCampos()
 
   if (msg.erro) return Swal.fire("Erro", msg.erro, "error");
   Swal.fire("Sucesso!", msg, "success");
-  limparCampos()
 }
 
 // ================= BUSCAR =================
@@ -180,10 +180,10 @@ async function alterar() {
 
     const msg = await res.json();
     Swal.close();
+    limparCampos()
 
     if (msg.erro) return Swal.fire("Erro", msg.erro, "error");
     Swal.fire("Atualizado!", msg.message, "success");
-    limparCampos()
 }
 
 // ================= REMOVER =================
@@ -202,10 +202,10 @@ async function remover() {
 
   const msg = await res.json();
   Swal.close();
+  limparCampos()
 
   if (msg.erro) return Swal.fire("Erro", msg.erro, "error");
   Swal.fire("Removido!", msg, "success");
-  limparCampos()
 }
 
 // ================= SALVAR HORAS =================
@@ -334,4 +334,5 @@ window.horaParaSegundos = horaParaSegundos;
 window.segundosParaHora = segundosParaHora;
 window.salvarHoras = salvarHoras;
 window.carregarUsuariosPorTurno = carregarUsuariosPorTurno;
+
 
