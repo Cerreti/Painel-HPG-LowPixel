@@ -99,6 +99,7 @@ async function cadastrar() {
 
   if (msg.erro) return Swal.fire("Erro", msg.erro, "error");
   Swal.fire("Sucesso!", msg, "success");
+  limparCampos()
 }
 
 // ================= BUSCAR =================
@@ -182,6 +183,7 @@ async function alterar() {
 
     if (msg.erro) return Swal.fire("Erro", msg.erro, "error");
     Swal.fire("Atualizado!", msg.message, "success");
+    limparCampos()
 }
 
 // ================= REMOVER =================
@@ -203,6 +205,7 @@ async function remover() {
 
   if (msg.erro) return Swal.fire("Erro", msg.erro, "error");
   Swal.fire("Removido!", msg, "success");
+  limparCampos()
 }
 
 // ================= SALVAR HORAS =================
@@ -331,3 +334,4 @@ window.horaParaSegundos = horaParaSegundos;
 window.segundosParaHora = segundosParaHora;
 window.salvarHoras = salvarHoras;
 window.carregarUsuariosPorTurno = carregarUsuariosPorTurno;
+
