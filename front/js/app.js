@@ -318,6 +318,20 @@ function validarCampo(id) {
     }
 }
 
+async function limparHoras() {
+  Swal.fire({ title: 'Limpando planilha...', didOpen: () => Swal.showLoading() });
+
+  const res = await fetch(API_URL, {
+    method: "POST",
+    body: JSON.stringify({ action: "limparHoras" })
+  });
+
+  const msg = await res.json();
+  Swal.close();
+
+  Swal.fire("Sucesso!", msg.message, "success");
+}
+
 // ================= INIT =================
 window.onload = () => {
     limparCampos();
@@ -334,6 +348,9 @@ window.horaParaSegundos = horaParaSegundos;
 window.segundosParaHora = segundosParaHora;
 window.salvarHoras = salvarHoras;
 window.carregarUsuariosPorTurno = carregarUsuariosPorTurno;
+window.limparHoras = limparHoras;
+
+
 
 
 
