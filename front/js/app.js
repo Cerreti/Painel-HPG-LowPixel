@@ -37,7 +37,9 @@ function showResult() {
     { nome: "Jaqueline Labubu", id: 1103 },
     { nome: "Ray Vecchi", id: 1332 },
     { nome: "Chico Clout", id: 2736 },
-    { nome: "Rafaela Infinity", id: 1411 }
+    { nome: "Rafaela Infinity", id: 1411 },
+    { nome: "Porronta Trem", id: 3392 },
+    { nome: "Victor Hale", id: 8581 },
   ];
 
   const optionsHTML = usuarios.map(u =>
@@ -349,6 +351,7 @@ window.segundosParaHora = segundosParaHora;
 window.salvarHoras = salvarHoras;
 window.carregarUsuariosPorTurno = carregarUsuariosPorTurno;
 window.limparHoras = limparHoras;
+
 
 
 
